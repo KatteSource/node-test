@@ -15,6 +15,9 @@ router.get('/', function (req, res, next) {
         req.session.islogin = req.cookies.islogin;
     }
     res.render('login', {title: 'LOGIN', test: res.locals.islogin});
+
+
+
 }).post('/login_submit',function (req, res) {
     var client = null;//usr.connect(); 返回连接对象
     usr.selectFun(client, req.body.username, function (result) {
