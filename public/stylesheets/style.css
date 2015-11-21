@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #EDEDED;
+    font-family: '微软雅黑';
+}
+
+a {
+    color: #0AE;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*header*/
+header {
+    background-color: #000000;
+    height: 28px;
+    line-height: 28px;
+}
+
+header .title {
+    width: 990px;
+    margin: 0 auto;
+}
+
+.title ul {
+    list-style-type: none;
+    color: #0AE;
+
+}
+
+.title ul.left {
+    float: left;
+}
+
+.title ul.right {
+    float: right;
+}
+
+.title ul.right li {
+    display: inline-block;
+    width: 55px;
+    text-align: center;
+}
+
+/*login*/
+.login-box {
+    width: 990px;
+    min-height: 450px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.login-box .login-content {
+    float: right;
+    width: 267px;
+    background-color: rgba(0, 0, 0, 0.21);
+    margin: 27px 95px;
+}
+
+.login-box .web-link{
+    font-size:14px;
+    height:40px;
+    line-height: 40px;
+}
+
+.backg-div {
+    background: url("../image/login-back-img.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.login-box div.login-title{
+    padding:26px 0 16px;
+    font-weight: 500;
+    width:100%;
+    text-align: center;
+    color: #ffffff;
+    font-size:18px;
+}
+
+.login-box div .txt {
+    display:inline-block;
+    background-color: #999;
+    color: #ffffff;
+    width: 60px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    font-size:14px;
+}
+
+.login-box div .ipt {
+    display:inline-block;
+    width: 170px;
+    height:30px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #ffffff;
+    padding:5px;
+}
+
+.login-box div .ipt input{
+    border:0;
+    width:160px;
+    outline-style: none;
+}
+
+
+
+.login-box div{
+    text-align: center;
+    font-size:0;
+}
+
+.login-box .user-name {
+    height:40px;
+    line-height: 40px;
+    padding:5px 0;
+}
+
+.login-box .btn{
+    height:60px;
+    line-height: 60px;
+}
+
+.login-box .btn input{
+    width:240px;
+    height:40px;
+    background-color: #3393ff;
+    border:0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-box .pass-word {
+    height:40px;
+    line-height: 40px;
+    padding:5px 0;
+}
+
+/*home*/
+.home-contet{
+    background-color: #a6ff67;
+    width:990px;
+    margin:100px auto;
+    padding:50px 100px;
+}
+
+
+/*index*/
+.index-content{
+    background-color: #a6ff67;
+    width:990px;
+    margin:100px auto;
+    padding:50px 100px;
+}
