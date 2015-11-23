@@ -37,4 +37,4 @@ exports.addUser = function(username,password){
 exports.getUser = function(username,callBack){
     var User = mongoose.model("UserInfo");
     User.find({"username":username},callBack);
-}
+};

@@ -21,7 +21,7 @@ router.get('/', function (req, res, next) {
     user_model.getUser(username, function (err, doc) {
         var result = doc[0];
         if (result === undefined) {
-            res.send('fail to login');
+            res.send('用户名无效');
         } else {
             if (result.password === req.body.password) {
                 req.session.islogin = req.body.username;
