@@ -7,7 +7,7 @@ var user_model = require('../routes/model');
 //var usr = require('../serverConn');
 /* GET reg page. */
 router.get('/',function (req, res) {
-    res.render('reg', {title: '注册Todo'});
+    res.render('reg', {title: 'Register'});
 })
 .post('/reg_submit',function (req, res) {
         var username = req.body.username;
