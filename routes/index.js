@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
     if (req.session.islogin) {
         res.locals.islogin = req.session.islogin;
     }
-    res.render('index', {title: '注册', test: res.locals.islogin});
+    res.render('index', {title: '主页', test: res.locals.islogin});
 });
 
 router.get('/logout', function (req, res) {

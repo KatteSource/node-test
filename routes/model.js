@@ -20,13 +20,12 @@ mongoose.model("UserInfo", new Schema({
  * 增加用户
  * @param 用户名
  * @param 密码
+ * @param callBack(err)
  */
-exports.addUser = function(username,password){
+exports.addUser = function(username,password,callBack){
     var User = mongoose.model("UserInfo");
     var user = new User({"username":username,"password":password});
-    user.save(function(err){
-
-    });
+    user.save(callBack);
 };
 
 /**
