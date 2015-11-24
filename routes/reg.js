@@ -3,13 +3,13 @@
  */
 var express = require('express');
 var router = express.Router();
-var user_model = require('../routes/model');
+/*var user_model = require('../routes/model');*/
 //var usr = require('../serverConn');
 /* GET reg page. */
 router.get('/',function (req, res) {
     res.render('reg', {title: 'Register'});
 })
-.post('/reg_submit',function (req, res) {
+/*.post('/reg_submit',function (req, res) {
         var username = req.body.username;
         var password = req.body.password;
         if(username&&password){
@@ -30,5 +30,5 @@ router.get('/',function (req, res) {
         }else{
             res.send('用户名或密码不能为空！');
         }
-});
+});*/
 module.exports = router;
