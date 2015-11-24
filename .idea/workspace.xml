@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a47ab1b9-0cd4-43e6-a68a-c485b5f62010" name="Default" comment="MVC模式 调试ing">
+    <list default="true" id="a47ab1b9-0cd4-43e6-a68a-c485b5f62010" name="Default" comment="">
       <change type="DELETED" beforePath="D:\WebStormProject\node-test\.idea\workspace.xml" afterPath="" />
     </list>
     <ignored path="node-test.iws" />
@@ -302,7 +302,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448382337903</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="删除多余文件">
+      <created>1448382746166</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1448382746166</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -334,7 +340,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="MVC模式 调试ing" />
-    <option name="LAST_COMMIT_MESSAGE" value="MVC模式 调试ing" />
+    <MESSAGE value="删除多余文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除多余文件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
