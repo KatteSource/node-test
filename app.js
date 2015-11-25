@@ -6,14 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 
-//控制器引用
-/*
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var login = require('./routes/login');
-var register = require('./routes/reg');
-*/
-
 var session = require('express-session');
 
 var app = express();
@@ -30,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser("An"));
 
-mount(app,'../../routes');
+
 app.use(session({
     secret: 'an',
     resave: false,
@@ -40,15 +32,7 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-//路由配置
-/*
-app.use('/', routes);
-app.use('/users', users);
-app.use('/login',login);
-app.use('/reg',register);
-*/
-
+mount(app,'../../routes');
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
