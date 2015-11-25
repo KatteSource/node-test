@@ -54,7 +54,8 @@ exports.edit = function (req, res, next) {
         user._action = 'edit';
         res.render('User/edit', {
             title:"修改",
-            user: user
+            user: user,
+            base:"../"
         });
     });
 };
