@@ -2,10 +2,12 @@
  * Created by Administrator on 2015/11/23.
  */
 
-//mongoDb  数据库托管 :https://mongolab.com/databases/kattnode
+//mongoDb  数据库托管 :https://mongolab.com/databases/kattnode  账号：17603606331
 var mongoose = require('mongoose');
+//链接字符串
+mongoose.connect('mongodb://katt:xu_jiaxin1234@ds057254.mongolab.com:57254/kattnode');
 exports.mongoose = mongoose;
-exports.connection = mongoose.connect('mongodb://katt:xu_jiaxin1234@ds057254.mongolab.com:57254/kattnode');
+
 
 
 

@@ -1,0 +1,27 @@
+
+<% include ../header %>
+<div>
+    <h2>Edit</h2>
+    <div>
+        <h1>编辑</h1>
+        <form action="/User/<%= user._id %>" method="post">
+            <table>
+                <tr>
+                    <td>用户名: <input type="text" value="<%= user.username %>" name="username"/></td>
+                </tr>
+                <tr>
+                    <td>密码: <input type="text" value="<%= user.password %>" name="password"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>编辑</div>
+                        <span>
+                           <input type="submit" value="确认"/>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+<% include ../footer %>

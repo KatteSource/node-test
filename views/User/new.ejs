@@ -1,0 +1,29 @@
+
+<% include ../header %>
+
+<div>
+    <h2>New</h2>
+    <div>
+        <h1>添加</h1>
+        <form action="/User" method="post">
+            <table>
+                <tr>
+                    <td>用户名: <input type="text" id="username" name="username"/></td>
+                </tr>
+                <tr>
+                    <td>密码: <input type="password" id="password" name="password"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>操作</div>
+                        <span>
+                            <input type="submit" value="确认"/>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+
+<% include ../footer %>
