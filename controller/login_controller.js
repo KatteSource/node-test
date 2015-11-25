@@ -17,16 +17,16 @@ exports.login = function (req, res, next) {
                 /*req.session.islogin = req.body.username;
                 res.locals.islogin = req.session.islogin;
                 res.cookie('islogin', res.locals.islogin, {maxAge: 60000});*/
-                res.redirect('/home');
+                res.redirect('User');
             } else {
-                res.redirect('/login');
+                res.redirect('Login/login');
             }
         }
     });
 };
 
 exports.load = function (req, res, next) {
-    res.render('login', {title: 'LOGIN', test: res.locals.islogin});
+    res.render('Login/login', {title: 'LOGIN', test: res.locals.islogin});
 }
 
 
@@ -44,7 +44,7 @@ exports.load = function (req, res, next) {
  user_model.getUser(username, function (err, doc) {
  var result = doc[0];
  if (result === undefined) {
- res.send('�û�����Ч');
+ res.send('用户名无效');
  } else {
  if (result.password === req.body.password) {
  req.session.islogin = req.body.username;

@@ -1,8 +1,8 @@
 /**
  * Created by Administrator on 2015/11/24.
  */
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://katt:xu_jiaxin1234@ds057254.mongolab.com:57254/kattnode');
+
+var mongoose = require('../mongoServer').mongoose;
 var Schema = mongoose.Schema;
 var MongooseDao = require('mongoosedao');
 
@@ -14,7 +14,7 @@ var userSchema = new Schema(
     }
 );
 
-//User集合
+//数据库中User集合
 var User = mongoose.model('UserInfo', userSchema);
 var UserDao = new MongooseDao(User);
 
