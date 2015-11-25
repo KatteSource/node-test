@@ -1,0 +1,38 @@
+<% include ../header %>
+
+<div class="login-box">
+    <div class="login-content">
+        <div class="login-title">
+            登录
+        </div>
+        <form method="post" action="/login">
+            <div class="user-name">
+                <span class="txt">
+                    User:
+                </span>
+                <span class="ipt">
+                    <input type="text" id="username" name="username" placeholder="用户名">
+                </span>
+            </div>
+            <div class="pass-word">
+                <span class="txt">
+                    Pwd:
+                </span>
+                <span class="ipt">
+                    <input type="password" id="password" name="password" placeholder="密码">
+                </span>
+            </div>
+            <div class="btn">
+                <input type="submit" value="登 陆">
+            </div>
+        </form>
+        <div class="web-link">
+            <a href="http://www.meitaotao.com">www.meitaotao.com</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="backg-div"></div>
+
+<% include ../footer %>

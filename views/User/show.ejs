@@ -1,0 +1,40 @@
+
+<% include ../header %>
+<div>
+    <h2>Show</h2>
+    <div>
+        <h1>详细信息</h1>
+        <table>
+            <tr>
+                <td>用户名:<%= user.username %></td>
+            </tr>
+            <tr>
+                <td>密码:<%= user.password %></td>
+            </tr>
+            <tr>
+                <td>
+                    <div>操作</div>
+                    <span data-id="<%= user._id %>">
+                        <a href="<%= user._id %>/edit">编辑</a>
+                        <a href="javascript:;" id="del">删除</a>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+	$(function(){
+        $("#del").click(function(){
+            var id = $(this).parent().attr("data-id");
+            var url ="del/"+id;
+            console.log(url);
+            $.post(url,function(result){
+                alert(result.status.msg);
+                window.location.href="/User";
+            });
+        })
+	});
+</script>
+<% include ../footer %>
