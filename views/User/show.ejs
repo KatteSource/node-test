@@ -31,7 +31,6 @@
             var url ="del/"+id;
             console.log(url);
             $.post(url,function(result){
-                alert(result.status.msg);
                 window.location.href="/User";
             });
         })

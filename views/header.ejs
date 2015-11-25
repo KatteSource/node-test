@@ -10,12 +10,16 @@
 <header>
     <div class="title">
         <ul class="left">
-            <li><%= title %></li>
+            <li><=====<%= title %>=====></li>
         </ul>
         <ul class="right">
             <li><a title="主页" href="/">Home</a></li>
+            <% if(global.islogin){ %>
+            <li><a title="登出" href="/logout">Logout</a></li>
+            <% }else{ %>
             <li><a title="登陆" href="/login">Login</a></li>
             <li><a title="注册" href="/reg">Register</a></li>
+            <% } %>
         </ul>
     </div>
 </header>

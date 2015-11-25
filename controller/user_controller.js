@@ -6,10 +6,9 @@ var User = require('../model/User');
 
 //展示列表页
 exports.list = function (req, res, next) {
-    console.log(req.method + ' /User => list, query: ' + JSON.stringify(req.query));
     User.getAll(function (err, users) {
         console.log(users);
-        res.render('User/index', {
+        return res.render('User/index', {
             title: "index",
             users: users
         });
@@ -54,22 +53,16 @@ exports.edit = function (req, res, next) {
         user._action = 'edit';
         res.render('User/edit', {
             title:"修改",
-            user: user,
-            base:"../"
+            user: user
         });
     });
 };
 
 //添加用户
 exports.add = function (req, res, next) {
-    console.log(req.method + ' /users => create, query: ' + JSON.stringify(req.query) +
-        ', params: ' + JSON.stringify(req.params) + ', body: ' + JSON.stringify(req.body));
     User.create({username: req.body.username, password: req.body.password}, function (err, user) {
         console.log(user);
-        res.render('User/show', {
-            title:"查看",
-            user: user
-        });
+        res.redirect('User');
     });
 };
 
@@ -81,30 +74,14 @@ exports.update = function (req, res, next) {
     var id = req.params.id;
     User.updateById(id, {username: req.body.username, password: req.body.password}, function (err, user) {
         console.log(user);
-        //res.json({
-        //    data: {
-        //        redirect: '/User/' + id
-        //    },
-        //    status: {
-        //        code: 0,
-        //        msg: 'update success!'
-        //    }
-        //});
-        res.redirect("/User",{
-            title:"查看",
-            user:user
-        });
+        res.redirect("/User");
     });
 };
 
 //删除用户
 exports.destroy = function (req, res, next) {
-    console.log(req.method + ' /User/del/:id => destroy, query: ' + JSON.stringify(req.query) +
-        ', params: ' + JSON.stringify(req.params) + ', body: ' + JSON.stringify(req.body));
-
     var id = req.params.id;
     User.deleteById(id, function (err) {
-        console.log(err);
         res.json({
             data: {},
             status: {
