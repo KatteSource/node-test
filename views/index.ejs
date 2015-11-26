@@ -1,14 +1,19 @@
 <% include header %>
+
 <div class="index-content">
-    <h1>index</h1>
-    <% if(global.islogin){ %>
+    <div class="right-content">
+        <h2>home</h2>
+        <% if(global.islogin){ %>
 
-    用户：<h2><%= test %></h2>已经登陆
+        <div>当前用户：<%= test %></div>
 
-    <% }else{ %>
+        <% }else{ %>
 
-    <p><a href="/login">登录</a></p>
+        <p><a href="/login">登录</a></p>
 
-    <% } %>
+        <% } %>
+    </div>
 </div>
+<div class="index-backg-div"></div>
+
 <% include footer %>

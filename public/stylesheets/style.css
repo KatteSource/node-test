@@ -93,6 +93,18 @@ header .title {
     z-index: -1;
 }
 
+.index-backg-div{
+    background: url("../image/index-back-img.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 
 .login-box div.login-title{
     padding:26px 0 16px;
@@ -127,6 +139,8 @@ header .title {
 .login-box div .ipt input{
     border:0;
     width:160px;
+    height:30px;
+    line-height: 30px;
     outline-style: none;
 }
 
@@ -165,19 +179,21 @@ header .title {
     padding:5px 0;
 }
 
-/*home*/
-.home-contet{
-    background-color: #a6ff67;
-    width:990px;
-    margin:100px auto;
-    padding:50px 100px;
-}
-
-
 /*index*/
 .index-content{
-    background-color: #a6ff67;
     width:990px;
     margin:100px auto;
     padding:50px 100px;
+
+    position: relative;
+}
+
+.index-content .right-content{
+    position: absolute;
+    width:200px;
+    /*height:80px;*/
+    padding:20px;
+    background-color: rgba(0, 0, 0, 0.21);
+    top:0;
+    right:105px;
 }
