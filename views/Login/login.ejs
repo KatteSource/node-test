@@ -8,15 +8,15 @@
         <form method="post" action="/login">
             <div class="user-name">
                 <span class="txt">
-                    User:
+                    <label for="">User:</label>
                 </span>
                 <span class="ipt">
-                    <input type="text" id="username" name="username" placeholder="用户名">
+                    <input type="text" id="username" name="username" placeholder="用户名" autocomplete="off">
                 </span>
             </div>
             <div class="pass-word">
                 <span class="txt">
-                    Pwd:
+                    <label for="">Pwd:</label>
                 </span>
                 <span class="ipt">
                     <input type="password" id="password" name="password" placeholder="密码">
@@ -32,7 +32,12 @@
     </div>
 </div>
 
-
 <div class="backg-div"></div>
+
+<script>
+    $(function(){
+
+    })
+</script>
 
 <% include ../footer %>
