@@ -1,31 +1,40 @@
 
 <% include ../header %>
-<div>
-    <h2>Index</h2>
-    <h1>用户列表</h1>
-    <span>
-        <a href="User/new">添加用户</a>
-    </span>
-    <table>
-        <tr>
-            <td>
+<div class="user-index">
+    <div class="list-title">
+        <span class="title">
+            用户列表
+        </span>
+        <span class="add-user">
+            <a href="User/new">添加用户</a>
+        </span>
+    </div>
+    <div class="table">
+        <ul class="table-header ul-table">
+            <li>
                 用户名
-            </td>
-            <td>
+            </li>
+            <li>
+                密码
+            </li>
+            <li>
                 操作
-            </td>
-        </tr>
+            </li>
+        </ul>
         <% for(var i = 0, l = users.length;i < l;i++){ %>
-        <tr>
-            <td>
+        <ul class="table-body ul-table">
+            <li>
                 <%= users[i].username %>
-            </td>
-            <td class="btn" data-id="<%= users[i]._id %>">
+            </li>
+            <li>
+                <%= users[i].password %>
+            </li>
+            <li class="btn" data-id="<%= users[i]._id %>">
                 <a href="User/<%= users[i]._id %>">查看</a>
-            </td>
-        </tr>
+            </li>
+        </ul>
         <% } %>
-    </table>
+    </div>
 </div>
 <% include ../footer %>
 

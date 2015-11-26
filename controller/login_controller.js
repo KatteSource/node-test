@@ -19,7 +19,7 @@ exports.login = function (req, res, next) {
                     res.locals.islogin = req.session.islogin;
                     res.cookie('islogin', res.locals.islogin, {maxAge: 60000});
                     global.islogin = res.locals.islogin;
-                    res.redirect('/');
+                    res.redirect('/User');
                 } else {
                     res.send("密码错误");
                 }

@@ -19,8 +19,8 @@ ul {
 /*header*/
 header {
     background-color: #000000;
-    height: 28px;
-    line-height: 28px;
+    height:50px;
+    line-height: 50px;
 }
 
 header .title {
@@ -31,7 +31,6 @@ header .title {
 .title ul {
     list-style-type: none;
     color: #0AE;
-
 }
 
 .title ul.left {
@@ -196,4 +195,106 @@ header .title {
     background-color: rgba(0, 0, 0, 0.21);
     top:0;
     right:105px;
+}
+
+
+.user-index{
+    width:990px;
+    margin:0 auto;
+}
+
+.user-index .list-title{
+    width:400px;
+    padding-top:35px;
+}
+.user-index .list-title .title{
+    font-size:16px;
+}
+
+.user-index .list-title .add-user{
+    float:right;
+    font-size:12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*模拟table样式*/
+.table{
+    width:400px;
+}
+
+.table .ul-table{
+    width:500px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.table .ul-table li{
+    color:#fff;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    font-family: "微软雅黑";
+    text-align: center;
+}
+
+.table .table-header{
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #595f65 0%, #282f36 63%, #3d464d 100%) repeat scroll 0 0;
+    border: medium none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 3px rgba(255, 255, 255, 0.2) inset;
+}
+
+.table .ul-table:after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.table ul.table-header li{
+    border: medium none;
+    border-radius: 0;
+    font: 15px/41px "微软雅黑",sans-serif;
+    background: rgba(0, 0, 0, 0) url("../image/subnav-border.png") no-repeat scroll right center;
+    width:93px;
+    height:34px;
+    padding:0 20px 6px;
+}
+
+.table ul.table-body{
+    margin-top:2px;
+    background-color: #515c65;
+}
+
+.table ul.table-body li{
+    width:93px;
+    height:24px;
+    font: 15px/28px "微软雅黑",sans-serif;
+    background-color: #515c65;
+    padding:0 20px 6px;
+}
+
+.table ul.ul-table:nth-child(even){
+    background-color:#3f4852;
+}
+
+.table ul.ul-table:nth-child(even) li{
+    background-color:#3f4852;
 }
