@@ -13,15 +13,15 @@
 <header>
     <div class="title">
         <ul class="left">
-            <li>Welcome ! <%= global.islogin%></li>
+            <li>欢迎 ! <%= global.islogin?global.islogin:"访客"%> 到来</li>
         </ul>
         <ul class="right">
-            <li><a title="主页" href="/">Home</a></li>
+            <li><a title="主页" href="/">主页</a></li>
             <% if(global.islogin){ %>
-            <li><a title="登出" href="/logout">Logout</a></li>
+            <li><a title="登出" href="/logout">登出</a></li>
             <% }else{ %>
-            <li><a title="登陆" href="/login">Login</a></li>
-            <li><a title="注册" href="/reg">Register</a></li>
+            <li><a title="登陆" href="/login">登录</a></li>
+            <li><a title="注册" href="/reg">注册</a></li>
             <% } %>
         </ul>
     </div>
